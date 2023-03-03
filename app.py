@@ -41,7 +41,7 @@ def handle_mqtt_message(client, userdata, message):
         topic=message.topic,
         payload=message.payload.decode()
     )
-    subprocess.call("./tools/demo.py image -f ./exps/example/yolox_voc/yolox_voc_s.py -c ./yolox_x_mushroom.pth --path ./muhsroom.jpg --conf 0.25 --nms 0.45 --tsize 640 --save_result --device 0")
+    subprocess.call(" ./tools/demo.py image -f ./exps/example/yolox_voc/yolox_voc_s.py -c ./yolox_x_mushroom.pth --path ./muhsroom.jpg --conf 0.25 --nms 0.45 --tsize 640 --save_result --device 0")
     print('Received message on topic: {topic} with payload: {payload}'.format(**data))
 
 
